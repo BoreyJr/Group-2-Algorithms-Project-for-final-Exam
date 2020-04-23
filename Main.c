@@ -174,16 +174,17 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
                 printf("Invalid");
             }
         }
-
-void function_dollar()
+    }
+            
+    void function_dollar();
 	{
-	printf(" Please input exchange rate:    riel");
+	printf(" Please input exchange rate: riel");
 	scanf("%f",&exrate);
 	
-	printf("Enter Salary :");
+	printf("Enter Salary : $");
 	scanf("%lf",&salary);
 	
-	printf("Enter Bonus of salary :");
+	printf("Enter Bonus of salary : $");
 	scanf("%lf",&bonus);
 	
 	printf("Do you have Husband or Wife? (Y/N) \n");
@@ -230,7 +231,7 @@ void function_dollar()
                 family = spouse + child; //sum husband or wife and childs //family member cal
 
                 salary_notax = 150000 * family; //find salary without tax
-		        suminriel= (salary+bonus)*exrate;
+		suminriel= (salary+bonus)*exrate;
                 salary = salary - salary_notax;
 
                 if (salary >= 0 && salary <= 1300000)
@@ -273,7 +274,7 @@ void function_dollar()
 
                 last_salary = (salary + salary_notax + bonus) - salary_tax;
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
-	            printf("Your Net Salary is : %f ",last_salary*exrate);
+	            printf("Your Net Salary is : %f ",last_salary/exrate);
         }
     }
 
