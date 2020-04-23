@@ -232,7 +232,7 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
 
                 salary_notax = 150000 * family; //find salary without tax
 		suminriel= (salary+bonus)*exrate;
-                salary = salary - salary_notax;
+                salary = suminriel - salary_notax;
 
                 if (salary >= 0 && salary <= 1300000)
                 {
