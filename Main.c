@@ -174,9 +174,8 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
                 printf("Invalid");
             }
         }
-    }
-            
-    void function_dollar();
+
+void function_dollar()
 	{
 	printf(" Please input exchange rate:    riel");
 	scanf("%f",&exrate);
@@ -231,7 +230,7 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
                 family = spouse + child; //sum husband or wife and childs //family member cal
 
                 salary_notax = 150000 * family; //find salary without tax
-		suminriel= (salary+bonus)*exrate;
+		        suminriel= (salary+bonus)*exrate;
                 salary = salary - salary_notax;
 
                 if (salary >= 0 && salary <= 1300000)
