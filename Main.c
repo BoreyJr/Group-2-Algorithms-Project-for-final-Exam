@@ -25,6 +25,7 @@
 void intro();
 void emp_scrc();
 void function_dollar();
+void function_riel();
 
 //Variable 
 char spouse_str;
@@ -35,7 +36,8 @@ int main()
 {
   intro();
   emp_scrc();
-  mainfunction();
+//  function_riel();
+//  function_dollar();
 	
 
 return 0;
@@ -44,31 +46,32 @@ void intro() //RakSmey
 {
 printf("Cambodia Salary tax\n");
 printf("Developed by Group 2\n");
-
 }
 void emp_scrc() //Bunrithsothy
 {
 	int currency;
 	
 	printf("Choose your currency:");
+	printf("1.Riel");
+	printf("2.Dollar");
 	scanf("%d",&currency);
 	
 	switch(currency)
 	{
 		case 1: //kh
 			{
-				function_dollar();
+				function_riel();
 				break;
 			}
 		case 2:
 			{
-				function_riel();
+				function_dollar();
 				break;
 			}
 	}
 	
 }
-void function_khmer () //1.borey //2.Pich & Hong //3.Mr.Hao
+void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
 {
 	
 //if they choose riel 	
@@ -170,10 +173,10 @@ void function_khmer () //1.borey //2.Pich & Hong //3.Mr.Hao
             {
                 printf("Invalid");
             }
-	function_dollar();
+			void	function_dollar();
 	{
 		printf(" Please input exchange rate:riel  ");
-	scanft("%f",&exrate);
+	scanf("%f",&exrate);
 	
 	printf("Enter Salary :");
 	scanf("%lf",&salary);
@@ -269,3 +272,5 @@ void function_khmer () //1.borey //2.Pich & Hong //3.Mr.Hao
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
 	        printf("Your Net Salary is : %f ",last_salary*exrate);
         }
+    }
+}
