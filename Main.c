@@ -16,9 +16,6 @@
 //exrate= exchange rate
 //suminriel= sum of salary and bonus convert from usd to riel.
 //*/
-
-
-
 #include<stdio.h>
 #include<string.h>
 //int spouse,inpendent,total;
@@ -27,7 +24,7 @@
 
 void intro();
 void emp_scrc();
-void mainfunction();
+void function_dollar();
 
 //Variable 
 char spouse_str;
@@ -51,9 +48,27 @@ printf("Developed by Group 2\n");
 }
 void emp_scrc() //Bunrithsothy
 {
+	int currency;
+	
+	printf("Choose your currency:");
+	scanf("%d",&currency);
+	
+	switch(currency)
+	{
+		case 1: //kh
+			{
+				function_dollar();
+				break;
+			}
+		case 2:
+			{
+				function_riel();
+				break;
+			}
+	}
 	
 }
-void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
+void function_khmer () //1.borey //2.Pich & Hong //3.Mr.Hao
 {
 	
 //if they choose riel 	
@@ -155,10 +170,9 @@ void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
             {
                 printf("Invalid");
             }
-	
-	
-//if they choose USD
-	printf(" Please input exchange rate:riel  ");
+	function_dollar();
+	{
+		printf(" Please input exchange rate:riel  ");
 	scanft("%f",&exrate);
 	
 	printf("Enter Salary :");
@@ -255,7 +269,3 @@ void mainfunction () //1.borey //2.Pich & Hong //3.Mr.Hao
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
 	        printf("Your Net Salary is : %f ",last_salary*exrate);
         }
-
-
-
-
