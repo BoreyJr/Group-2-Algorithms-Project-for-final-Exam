@@ -51,9 +51,9 @@ void emp_scrc() //Bunrithsothy
 {
 	int currency;
 	
-	printf("Choose your currency:");
-	printf("1.Riel");
-	printf("2.Dollar");
+	printf("Choose your currency: \n");
+	printf("1.Riel\n");
+	printf("2.Dollar\n");
 	scanf("%d",&currency);
 	
 	switch(currency)
@@ -173,9 +173,12 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
             {
                 printf("Invalid");
             }
-			void	function_dollar();
+        }
+    }
+            
+    void function_dollar();
 	{
-		printf(" Please input exchange rate:riel  ");
+	printf(" Please input exchange rate:    riel");
 	scanf("%f",&exrate);
 	
 	printf("Enter Salary :");
@@ -213,6 +216,7 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
 				break;
 			}
 	}	
+
  if (salary >= 0 && bonus >=0)
             {
                 if (child >= 9)
@@ -270,7 +274,8 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
 
                 last_salary = (salary + salary_notax + bonus) - salary_tax;
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
-	        printf("Your Net Salary is : %f ",last_salary*exrate);
+	            printf("Your Net Salary is : %f ",last_salary*exrate);
         }
     }
-}
+
+
