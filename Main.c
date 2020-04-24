@@ -30,7 +30,7 @@ void function_riel();
 //Variable 
 char spouse_str;
 double salary=0, bonus=0,salary_notax=0,spouse=0,child=0,tax=0,last_salary=0,salary_tax=0,family=0,salary1=0;
-float exrate,suminriel;
+double exrate=0,suminriel=0;
 
 int main()
 {
@@ -124,7 +124,8 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
                 family = spouse + child; //sum husband or wife and childs //family member cal
 
                 salary_notax = 150000 * family; //find salary without tax
-
+				
+			//	salary = salary * 4000;
                 salary = salary - salary_notax;
 
 
@@ -168,18 +169,18 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
 
                 last_salary = (salary + salary_notax + bonus) - salary_tax;
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
+               // printf("Your Net Salary is :  %lf$\n",last_salary/4000);
             }
             else
             {
                 printf("Invalid");
             }
         }
-    }
             
-    void function_dollar();
+    void function_dollar()
 	{
 	printf(" Please input exchange rate: riel");
-	scanf("%f",&exrate);
+	scanf("%lf",&exrate);
 	
 	printf("Enter Salary : $");
 	scanf("%lf",&salary);
@@ -231,7 +232,8 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
                 family = spouse + child; //sum husband or wife and childs //family member cal
 
                 salary_notax = 150000 * family; //find salary without tax
-		suminriel= (salary+bonus)*exrate;
+               // salary_notax = salary_notax*exrate;
+				suminriel= (salary+bonus)*exrate;
                 salary = suminriel - salary_notax;
 
                 if (salary >= 0 && salary <= 1300000)
@@ -268,13 +270,13 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
 				
 				printf("\n");
               	printf("=================\n");
-              	printf("Tax rate : %lf \n",tax);  
+              	printf("Tax rate : %lf %\n",tax);  
                 printf("Tax Of salary : %lfRiels\n", salary_tax);
-               /// printf("Tax Of salary : %lfRiel\n",salary_tax);
+               printf("Tax Of salary : %lf$\n",salary_tax*exrate);
 
                 last_salary = (salary + salary_notax + bonus) - salary_tax;
                 printf("Your Net Salary is :  %lfRiel\n",last_salary);
-	            printf("Your Net Salary is : %f ",last_salary/exrate);
+	            printf("Your Net Salary is : %lf ",last_salary/exrate);
         }
     }
 
