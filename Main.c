@@ -178,19 +178,19 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
         }
             
     void function_dollar()
-	  printf(" Please input exchange rate in riel :");
+	 printf("+. Please input exchange rate in riel : ");
        scanf("%lf",&exrate);
        
-       printf("Enter Salary : $");
+       printf("+. Enter Salary                       : $");
        scanf("%lf",&salary);
        
-       printf("Enter Bonus of salary : $");
+       printf("+. Enter Bonus of salary              : $");
        scanf("%lf",&bonus);
        
-       printf("Do you have Husband or Wife? (Yes/No) \n");
+       printf("+. Do you have Husband or Wife? (Yes/No) \n");
        scanf(" %c",&spouse_str);
        
-       printf("Enter Child :");
+       printf("+. Enter Child :");
        scanf("%lf",&child);
        
        switch(spouse_str)
@@ -280,5 +280,3 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
     return 0;
                }
 }
-
-
