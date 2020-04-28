@@ -187,7 +187,7 @@ void function_riel () //1.borey //2.Pich & Hong //3.Mr.Hao
             
    void function_dollar() //1.borey //2.Pich & Hong //3.Mr.Hao
 {
-//if they choose riel 	
+//if they choose dollar
 	printf("Enter Rate : \n");
 	scanf("%lf",&rate);
 	
